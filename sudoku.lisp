@@ -307,9 +307,9 @@
 
 ;; Start the program
 (format t "~%")
-(format t "╔════════════════════════════════════╗~%")
-(format t "║    Welcome to Sudoku Solver        ║~%")
-(format t "║  Using Backtracking & DFS Methods  ║~%")
-(format t "╚════════════════════════════════════╝~%~%")
+(format t "======================================~%")
+(format t "|    Welcome to Sudoku Solver        |~%")
+(format t "|  Using Backtracking & DFS Methods  |~%")
+(format t "======================================%%")
 
 (main-menu)
