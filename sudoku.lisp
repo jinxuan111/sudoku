@@ -4,8 +4,7 @@
 
 ;; ===== 1. Basic Data Structures and Functions =====
 
-(defun create-easy-puzzle ()
-  "Create the base puzzle (30 given clues)"
+(defun create-easy-puzzle  ()
   '((5 3 0 0 7 0 0 0 0)
     (6 0 0 1 9 5 0 0 0)
     (0 9 8 0 0 0 0 6 0)
@@ -17,7 +16,6 @@
     (0 0 0 0 8 0 0 7 9)))
 
 (defun create-medium-puzzle ()
-  "Create a puzzle with one less clue (29 given clues)"
   '((5 3 0 0 7 0 0 0 0)
     (6 0 0 1 9 5 0 0 0)
     (0 9 8 0 0 0 0 6 0)
@@ -29,10 +27,10 @@
     (0 0 0 0 8 0 0 7 9)))
 
 (defun create-hard-puzzle ()
-  "Create a puzzle with two less clues (28 given clues)"
   '((5 3 0 0 7 0 0 0 0)
     (6 0 0 1 9 5 0 0 0)
     (0 9 8 0 0 0 0 6 0)
+
     (8 0 0 0 6 0 0 0 0)
     (4 0 0 8 0 3 0 0 0)
     (7 0 0 0 2 0 0 0 6)
@@ -150,7 +148,6 @@
                  (return-from dfs t))
              (let ((empty (find-best-empty-cell b)))
                (unless empty (return-from dfs t))
-               ;; 这里改成 let* 才是关键修复！
                (let* ((row (first empty))
                       (col (second empty))
                       (candidates (get-candidates b row col)))
@@ -310,6 +307,6 @@
 (format t "======================================~%")
 (format t "|    Welcome to Sudoku Solver        |~%")
 (format t "|  Using Backtracking & DFS Methods  |~%")
-(format t "======================================%%")
+(format t "======================================~%")
 
 (main-menu)
